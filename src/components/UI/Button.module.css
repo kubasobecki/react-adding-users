@@ -1,0 +1,13 @@
+.button {
+    border: none;
+    line-height: 2.5rem;
+    color: #fff;
+    background-color: darkturquoise;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background-color: darkcyan;
+}

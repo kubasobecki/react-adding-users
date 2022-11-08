@@ -1,0 +1,10 @@
+.user-item {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 0 1rem 0;
+}
+
+.user-item:last-child {
+    margin: 0;
+}

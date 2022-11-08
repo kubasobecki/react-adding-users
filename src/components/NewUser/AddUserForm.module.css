@@ -1,0 +1,22 @@
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-user-form label {
+}
+
+.add-user-form input {
+    padding: 0 0.5rem;
+    border: 1px solid #ccc;
+    margin: 0.25rem 0 1rem 0;
+    line-height: 2rem;
+    border-radius: 4px;
+    outline: none;
+}
+
+.add-user-form input:focus,
+.add-user-form input:focus-visible,
+.add-user-form input:active {
+    border: 1px solid turquoise;
+}
