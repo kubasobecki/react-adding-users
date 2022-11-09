@@ -1,23 +1,25 @@
-import { useState } from 'react';
+import Card from '../UI/Card';
 import UserItem from './UserItem';
+import styles from './UserList.module.css';
 
 const UserList = props => {
-    const [users, setUsers] = useState(props.users);
-
     const noUsersFallback = <p>No users to show. Please add new ones.</p>;
 
     const userItems = props.users.map(user => (
         <UserItem
-            key={Math.random() * 10}
+            key={user.id}
             username={user.username}
             age={user.age}
         ></UserItem>
     ));
 
+    const classes = `user-list ${styles.list}`;
     return (
-        <div className="user-list">
-            {props.users.length ? userItems : noUsersFallback}
-        </div>
+        <Card className="user-list">
+            <ul className={classes}>
+                {props.users.length ? userItems : noUsersFallback}
+            </ul>
+        </Card>
     );
 };
 

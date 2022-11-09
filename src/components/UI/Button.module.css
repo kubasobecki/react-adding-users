@@ -8,6 +8,7 @@
     background-color: darkturquoise;
     border-radius: 4px;
     cursor: pointer;
+    padding: 0 2rem;
 }
 
 .button:hover,

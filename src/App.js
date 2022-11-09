@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Card from './components/UI/Card';
 import AddUserForm from './components/Users/AddUserForm';
 import UserList from './components/Users/UserList';
 import Modal from './components/UI/Modal';
@@ -20,7 +19,11 @@ function App() {
             });
         } else {
             setUsers(prevUsers => [
-                { username: formData.username, age: formData.age },
+                {
+                    username: formData.username,
+                    age: formData.age,
+                    id: formData.id
+                },
                 ...prevUsers
             ]);
         }
@@ -39,18 +42,14 @@ function App() {
 
     return (
         <div>
-            <Card className="add-user-form">
-                <AddUserForm onSubmit={formSubmitHandler}></AddUserForm>
-            </Card>
-            <Card className="user-list">
-                <UserList users={users}></UserList>
-            </Card>
+            <AddUserForm onSubmit={formSubmitHandler} />
+            <UserList users={users} />
             {!modal.isValid && (
                 <Modal
                     title={modal.title}
                     content={modal.content}
                     closeModal={closeModalHandler}
-                ></Modal>
+                />
             )}
         </div>
     );

@@ -18,21 +18,26 @@
 }
 
 .modal-inner__title {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     border-radius: 12px 12px 0 0;
-    padding: 1rem 2rem;
     color: #fff;
     background: tomato;
+}
+
+.modal-inner__title h2 {
+    padding: 1rem 2rem;
+    margin: 0;
 }
 
 .modal-inner__content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
     border-radius: 0 0 12px 12px;
     padding: 1rem 2rem;
 }
 
 .modal-inner__content__message {
-    padding: 1rem 2rem;
+    padding: 1rem 0;
 }

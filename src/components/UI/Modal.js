@@ -8,14 +8,14 @@ const Modal = props => {
             onClick={props.closeModal}
         >
             <div className={styles['modal-inner']}>
-                <div className={styles['modal-inner__title']}>
-                    {props.title}
-                </div>
+                <header className={styles['modal-inner__title']}>
+                    <h2>{props.title}</h2>
+                </header>
                 <div className={styles['modal-inner__content']}>
                     <p className={styles['modal-inner__content__message']}>
                         {props.content}
                     </p>
-                    <Button label="OK" className="modal-button-ok"></Button>
+                    <Button className="modal-button-ok">OK</Button>
                 </div>
             </div>
         </div>
