@@ -18,12 +18,24 @@ const AddUserForm = props => {
     const submitHandler = e => {
         e.preventDefault();
 
-        const userData = {
-            username: enteredUsername,
-            age: enteredAge
-        };
+        const formData = {};
 
-        props.onAddUser(userData);
+        if (!enteredUsername || !enteredAge) {
+            formData.isValid = false;
+            formData.errorTitle = 'Invalid input';
+            formData.errorContent =
+                'Please enter a valid name and age (non-empty values).';
+        } else if (enteredAge < 1) {
+            formData.isValid = false;
+            formData.errorTitle = 'Invalid input';
+            formData.errorContent = 'Please enter a valid age (>0).';
+        } else {
+            formData.isValid = true;
+            formData.username = enteredUsername;
+            formData.age = enteredAge;
+        }
+
+        props.onSubmit(formData);
         setEnteredUsername('');
         setEnteredAge('');
     };
@@ -53,7 +65,7 @@ const AddUserForm = props => {
                 value={enteredAge}
                 onChange={ageChangeHandler}
             />
-            <Button type="submit" label="Add User"></Button>
+            <Button type="submit" label="Add User" className="button"></Button>
         </form>
     );
 };

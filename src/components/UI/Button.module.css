@@ -1,4 +1,7 @@
 .button {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
     border: none;
     line-height: 2.5rem;
     color: #fff;
