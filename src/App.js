@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Card from './components/UI/Card';
-import AddUserForm from './components/NewUser/AddUserForm';
+import AddUserForm from './components/Users/AddUserForm';
 import UserList from './components/Users/UserList';
 import Modal from './components/UI/Modal';
 
